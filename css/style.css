@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/* Global */
+body {
+  background-color: #f5f5f5;
+  font-family: Lato, sans-serif;
+}
+
+main {
+  padding-top: 30vh;
+  transition: padding 1s ease;
+}
+
+/* Form */
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form #input-search {
+  width: 350px;
+  max-width: 80vw;
+}
+
+form #hidden-button {
+  margin-right: 15px;
+  visibility: hidden;
+  max-width: 10vw
+}
+
+form #random-button { margin-left: 15px; }
+
+/* Card */
+.card {
+  filter: brightness(100%);
+  -webkit-filter: brightness(100%);
+}
+
+.card:hover {
+  filter: brightness(95%);
+  -webkit-filter: brightness(95%);
+  transition: all 0.5s ease;
+}
+
+.card-columns {
+  column-count: 1;
+}
+
+@media (min-width: 575px){
+  .card-columns {column-count: 1;}
+}
+
+@media (min-width: 768px){
+  .card-columns {column-count: 2;}
+}
+
+@media (min-width: 992px){
+  .card-columns {column-count: 3;}
+}
+
+/* Sticky footer */
+html {
+  position: relative;
+  min-height: 100vh;
+} 
+
+body {
+  padding-bottom: 42px;
+  margin-bottom: 42px; /* Margin bottom by footer height */
+} 
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.45);
+  font-family: Lato, sans-serif;
+  font-size: 15px;
+} 
+
+footer a {
+  color: white;
+  text-decoration: none;
+} 
+
+footer a:focus, footer a:hover, footer a:visited {
+  text-decoration: none;
+  color: white;
+} 
+
+footer span {
+  vertical-align: middle;
+} 
+
+.i-big {
+  vertical-align: middle;
+  font-size: 18px;
+}
