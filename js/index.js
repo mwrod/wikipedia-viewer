@@ -2,6 +2,15 @@ var offset = 0;
 var input = "";
 var transitioned;
 
+$(document).ready(function() {
+  $('form').submit(function(e) {
+    handleRequest($(this)[0]);
+    e.preventDefault();
+  });
+
+  $('#button-load').on('click', loadMore);
+});
+
 function getApiCall(search, offset = 0){
   offset *= 10;
   search = encodeURIComponent(search.trim());
@@ -10,6 +19,7 @@ function getApiCall(search, offset = 0){
 
 function handleRequest(form){
   transitioned = false;
+  console.log(form);
   input = form["search-input"].value;
   var req = getApiCall(input);
 

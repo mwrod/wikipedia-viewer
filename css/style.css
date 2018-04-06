@@ -30,6 +30,10 @@ form #hidden-button {
 
 form #random-button { margin-left: 15px; }
 
+#button-load {
+  display: none;
+}
+
 /* Card */
 .card {
   filter: brightness(100%);

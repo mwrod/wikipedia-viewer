@@ -15,20 +15,22 @@
 
   <main>
     <h1 class="h3 py-3 text-center">Wikipedia Viewer</h1>
-    <form action="javascript:;" onsubmit="handleRequest(this)">
+    <form>
       <button id="hidden-button" type="button" class="btn btn-secondary">Random</button>
       <div id="input-search" class="input-group">
         <input name="search-input" type="text" class="form-control" placeholder="Wikipedia article" aria-label="Wikipedia search" required>
         <div class="input-group-append">
-          <button class="btn btn-secondary" type="submit" onclick="this.blur()"><i class="fa fa-search"></i></button>
+          <button class="btn btn-secondary" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
         </div>
       </div>
-      <a id="random-button" onclick="this.blur()" href="https://en.wikipedia.org/wiki/Special:Random" class="btn btn-secondary" target="_blank">Random</a>
+      <a id="random-button" href="https://en.wikipedia.org/wiki/Special:Random" class="btn btn-secondary" target="_blank">Random</a>
     </form>
     <div class="container mt-3" id="main-result">
     </div>
     <div class="text-center mt-4">
-      <button id="button-load" class="btn btn-secondary" onclick="loadMore();this.blur()" style="display: none">Load more results</button>
+      <button id="button-load" class="btn btn-secondary">Load more results</button>
     </div>
   </main>
 
